@@ -63,17 +63,31 @@ public class DemoTest {
 		
 		// retreive more than one records like select query 
 		
-			Query qry= manager.createQuery("select p from Product p");
-			List<Product> listOfProuct = qry.getResultList();
-			System.out.println("Number of records "+listOfProuct.size());
-			Iterator<Product> li = listOfProuct.iterator();
-			while(li.hasNext()) {
-				Product p = li.next();
-				System.out.println(p);  // it call toString method
-			}
+//			Query qry= manager.createQuery("select p from Product p");
+//			List<Product> listOfProuct = qry.getResultList();
+//			System.out.println("Number of records "+listOfProuct.size());
+//			Iterator<Product> li = listOfProuct.iterator();
+//			while(li.hasNext()) {
+//				Product p = li.next();
+//				System.out.println(p);  // it call toString method
+//			}
+//				
 				
-				
-				
+		// retriving with conditions 
+		//Query qry= manager.createQuery("select p from Product p where p.pid=100");
+		//Query qry= manager.createQuery("select p from Product p where p.price>60000");
+		// dynamic value using label query 
+		Query qry= manager.createQuery("select p from Product p where p.price> :p_price");
+		float price = 60000;
+		qry.setParameter("p_price", price);
+		List<Product> listOfProuct = qry.getResultList();
+		System.out.println("Number of records "+listOfProuct.size());
+		Iterator<Product> li = listOfProuct.iterator();
+		while(li.hasNext()) {
+			Product p = li.next();
+			System.out.println(p);  // it call toString method
+		}
+			
 				
 				
 		
