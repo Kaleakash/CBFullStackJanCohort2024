@@ -77,20 +77,48 @@ public class DemoTest {
 		//Query qry= manager.createQuery("select p from Product p where p.pid=100");
 		//Query qry= manager.createQuery("select p from Product p where p.price>60000");
 		// dynamic value using label query 
-		Query qry= manager.createQuery("select p from Product p where p.price> :p_price");
-		float price = 60000;
-		qry.setParameter("p_price", price);
-		List<Product> listOfProuct = qry.getResultList();
-		System.out.println("Number of records "+listOfProuct.size());
-		Iterator<Product> li = listOfProuct.iterator();
-		while(li.hasNext()) {
-			Product p = li.next();
-			System.out.println(p);  // it call toString method
-		}
+//		Query qry= manager.createQuery("select p from Product p where p.price> :p_price");
+//		float price = 60000;
+//		qry.setParameter("p_price", price);
+//		List<Product> listOfProuct = qry.getResultList();
+//		System.out.println("Number of records "+listOfProuct.size());
+//		Iterator<Product> li = listOfProuct.iterator();
+//		while(li.hasNext()) {
+//			Product p = li.next();
+//			System.out.println(p);  // it call toString method
+//		}
 			
-				
-				
 		
+		//retrieve partial object ie pid 
+		
+//		Query qry= manager.createQuery("select p.pid from Product p");
+//		List<Integer> listOfProuct = qry.getResultList();
+//		Iterator<Integer> li = listOfProuct.iterator();
+//		while(li.hasNext()) {
+//			int pid = li.next();
+//			System.out.println(pid);  
+//		}
+		
+		//retrieve partial object ie pname
+		
+//		Query qry= manager.createQuery("select p.pname from Product p");
+//		List<String> listOfProuct = qry.getResultList();
+//		Iterator<String> li = listOfProuct.iterator();
+//		while(li.hasNext()) {
+//			String pname = li.next();
+//			System.out.println(pname);  
+//		}
+		
+		// retrieve partial object more than property pname,price 
+
+		
+		Query qry= manager.createQuery("select p.pname,p.price from Product p");
+		List<Object[]> listOfProuct = qry.getResultList();
+		Iterator<Object[]> li = listOfProuct.iterator();
+		while(li.hasNext()) {
+			Object obj[]=li.next();
+			System.out.println("PName "+obj[0]+" Price "+obj[1]);
+		}
 	}
 
 }
