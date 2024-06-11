@@ -1,7 +1,16 @@
 package com.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+//@Table(name="employee_details")
 public class Employee {
+@Id
 private int id;
+//@Column(name="employee_name")
 private String name;
 private float salary;
 public int getId() {
