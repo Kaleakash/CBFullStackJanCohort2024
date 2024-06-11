@@ -111,7 +111,7 @@ public class DemoTest {
 		
 		// retrieve partial object more than property pname,price 
 
-		
+		// join query 
 		Query qry= manager.createQuery("select p.pname,p.price from Product p");
 		List<Object[]> listOfProuct = qry.getResultList();
 		Iterator<Object[]> li = listOfProuct.iterator();
