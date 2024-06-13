@@ -1,5 +1,7 @@
 package com.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -47,7 +49,7 @@ public class EmployeeController {
 		model.addAttribute("msg", result);  // store result in model scope
 		System.out.println(result);
 		
-		return "addEmployee";		// viewresolver :return page with without extension
+		return "index";		// viewresolver :return page with without extension
 	}
 	
 	@RequestMapping(value = "addEmployeeInDb1",method = RequestMethod.POST)
@@ -60,7 +62,21 @@ public class EmployeeController {
 		return "addEmployee";		// viewresolver :return page with without extension
 	}
 	
+	// http://localhost:9191/view 
+	
+	@RequestMapping(value = "view",method = RequestMethod.GET)
+	public String viewEmployee(Model model) {
+		List<Employee> listOfEmp = employeeService.findAllEmployee();
+		model.addAttribute("listofemp", listOfEmp);   // store list of employee object in model scope. 
+		return "viewEmployee";		
+	}
 }
+
+
+
+
+
+
 
 
 

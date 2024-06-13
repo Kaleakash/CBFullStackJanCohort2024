@@ -7,6 +7,7 @@
 <body>
 <span th:text="${msg}" style="color:red"></span>
 <h2>Add Employee with Generic Html Form</h2>
+
 <form action="addEmployeeInDb" method="post">
 <label>EmpId</label>
 <input type="number" name="id"/><br/>
@@ -17,6 +18,7 @@
 <input type="submit" value="Add Employee">
 <input type="reset" value="reset">
 </form>
+
 <hr/>
 <h2>Add Employee with Thymeleaf form</h2>
 <form action="addEmployeeInDb1" method="post" th:object="${employee}">
@@ -29,6 +31,10 @@
 <input type="submit" value="Add Employee">
 <input type="reset" value="reset">
 </form>
+
+<br/>
+<a href="/">Index Page</a>
+
 </body>
 </html>
 

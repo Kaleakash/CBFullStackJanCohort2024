@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
+<span th:text="${msg}" style="color:red"></span>
 <h2>Welcome to Spring boot with View as Thymeleaf!</h2>
 <a href="add">Add Employee</a><br/>
+<a href="view">View Employee</a><br/>
 </body>
 </html>
