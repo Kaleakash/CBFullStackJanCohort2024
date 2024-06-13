@@ -32,6 +32,21 @@ public class EmployeeDao {
 		}
 	}
 	
+	public int deleteEmployee(int id) {
+		
+		EntityManager manager  = emf.createEntityManager();
+		EntityTransaction tran = manager.getTransaction();
+		Employee emp = manager.find(Employee.class, id);
+		if(emp==null) {
+			return 0;
+		}else {
+			tran.begin();
+				manager.remove(emp);
+			tran.commit();
+			return 1;
+		}
+	}
+	
 	public List<Employee> findAllEmployee() {
 		EntityManager manager  = emf.createEntityManager();
 		Query qry = manager.createQuery("select emp from Employee emp");

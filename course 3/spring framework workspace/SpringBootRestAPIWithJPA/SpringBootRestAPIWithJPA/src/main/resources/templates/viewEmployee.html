@@ -5,17 +5,22 @@
 <title>Insert title here</title>
 </head>
 <body>
+<span th:text="${msg}" style="color:red"></span>
 <h2>All Employee records</h2>
 <table border="1">
 	<tr>
 		<th>Id</th>
 		<th>Name</th>
 		<th>Salary</th>
+		<th>Delete</th>
 	</tr>
 	<tr th:each="emp:${listofemp}">
 		<td th:text="${emp.id}"></td>
 		<td th:text="${emp.name}"></td>
 		<td th:text="${emp.salary}"></td>
+		<td>
+			<a th:href="@{deleteEmployee(id=${emp.id})}">Delete</a>
+		</td>
 	</tr>
 </table>
 <br/>

@@ -38,6 +38,15 @@ public class EmployeeService {
 		
 		return listOfEmp;
 	}
+	
+	public String deleteEmployee(int id) {
+		if(employeeDao.deleteEmployee(id)>0) {
+			return "Employee record deleted";
+		}else {
+			return "Employee record not present";
+		}
+		
+	}
 }
 
 

@@ -70,6 +70,19 @@ public class EmployeeController {
 		model.addAttribute("listofemp", listOfEmp);   // store list of employee object in model scope. 
 		return "viewEmployee";		
 	}
+	// http://localhost:9191/deleteEmployee/ 
+	@RequestMapping(value = "deleteEmployee",method = RequestMethod.GET)
+	public String deleteEmployee(Model model, HttpServletRequest req) {
+		int id = Integer.parseInt(req.getParameter("id"));
+		//System.out.println("id is "+id);	
+		String result = employeeService.deleteEmployee(id);
+		
+		List<Employee> listOfEmp = employeeService.findAllEmployee();
+		
+		model.addAttribute("listofemp", listOfEmp);   // store list of employee object in model scope. 
+		model.addAttribute("msg", result);
+		return "viewEmployee";		
+	}
 }
 
 
