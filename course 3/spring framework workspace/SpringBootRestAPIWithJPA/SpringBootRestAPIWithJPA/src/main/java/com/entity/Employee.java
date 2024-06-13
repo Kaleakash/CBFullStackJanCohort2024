@@ -1,5 +1,8 @@
 package com.entity;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -7,6 +10,8 @@ import jakarta.persistence.Table;
 
 @Entity
 //@Table(name="employee_details")
+@Component
+@Scope("prototype")
 public class Employee {
 @Id
 private int id;
