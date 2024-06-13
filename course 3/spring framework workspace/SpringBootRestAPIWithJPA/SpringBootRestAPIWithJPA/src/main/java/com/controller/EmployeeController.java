@@ -26,8 +26,9 @@ public class EmployeeController {
 	}
 	
 	@RequestMapping(value = "add",method = RequestMethod.GET)
-	public String addEmployeePage() {
+	public String addEmployeePage(Model model, Employee emp) {  // DI for model and employee
 		System.out.println("Add Employee Page Open");
+	model.addAttribute("employee", emp);    // store employee object as key as employee in model scope. 
 		return "addEmployee";		// viewresolver :return page with without extension
 	}
 	
@@ -49,6 +50,15 @@ public class EmployeeController {
 		return "addEmployee";		// viewresolver :return page with without extension
 	}
 	
+	@RequestMapping(value = "addEmployeeInDb1",method = RequestMethod.POST)
+	public String addEmployeeInDb1(Employee emp,Model model) {   // DI for request object as well as Employee  
+		System.out.println(emp);	// toString method
+		System.out.println(emp.getId()+" "+emp.getSalary()+" "+emp.getName());
+		
+		String result = employeeService.storeEmployee(emp);
+		model.addAttribute("msg", result);  // store result in model scope
+		return "addEmployee";		// viewresolver :return page with without extension
+	}
 	
 }
 
