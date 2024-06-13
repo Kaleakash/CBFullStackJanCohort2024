@@ -32,6 +32,16 @@ public class EmployeeDao {
 		}
 	}
 	
+	public List<Employee> findAllEmployee() {
+		EntityManager manager  = emf.createEntityManager();
+		Query qry = manager.createQuery("select emp from Employee emp");
+		List<Employee> listOfEmp = qry.getResultList();
+		return listOfEmp;
+		
+	}
 	
 	
 }
+
+
+
