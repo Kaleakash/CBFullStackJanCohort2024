@@ -876,3 +876,33 @@
 2024-06-14 07:11:02,067 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2024-06-14 07:11:02,072 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2024-06-14 07:11:02,075 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Desktop\Java Full Stack - 2024 - Jan Batch\course 3\spring framework workspace\SpringBootRestAPI\SpringBootRestAPI\src\test\resources
+2024-06-14 07:19:20,042 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-06-14 07:19:20,050 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-06-14 07:19:20,054 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Desktop\Java Full Stack - 2024 - Jan Batch\course 3\spring framework workspace\SpringBootRestAPI\SpringBootRestAPI\src\test\resources
+2024-06-14 07:20:07,616 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-06-14 07:20:07,624 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-06-14 07:20:07,628 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Desktop\Java Full Stack - 2024 - Jan Batch\course 3\spring framework workspace\SpringBootRestAPI\SpringBootRestAPI\src\test\resources
+2024-06-14 07:21:19,680 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-06-14 07:21:19,688 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-06-14 07:21:19,691 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Desktop\Java Full Stack - 2024 - Jan Batch\course 3\spring framework workspace\SpringBootRestAPI\SpringBootRestAPI\src\test\resources
+2024-06-14 07:23:22,232 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-06-14 07:23:22,236 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-06-14 07:23:22,239 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Desktop\Java Full Stack - 2024 - Jan Batch\course 3\spring framework workspace\SpringBootRestAPI\SpringBootRestAPI\src\test\resources
+2024-06-14 07:23:40,702 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-06-14 07:23:40,707 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-06-14 07:23:40,710 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Desktop\Java Full Stack - 2024 - Jan Batch\course 3\spring framework workspace\SpringBootRestAPI\SpringBootRestAPI\src\test\resources
+2024-06-14 07:25:34,642 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-06-14 07:25:34,647 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-06-14 07:25:34,650 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Desktop\Java Full Stack - 2024 - Jan Batch\course 3\spring framework workspace\SpringBootRestAPI\SpringBootRestAPI\src\test\resources
+2024-06-14 07:27:33,792 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-06-14 07:27:33,798 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-06-14 07:27:33,800 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Desktop\Java Full Stack - 2024 - Jan Batch\course 3\spring framework workspace\SpringBootRestAPI\SpringBootRestAPI\src\test\resources
+2024-06-14 07:28:56,211 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-06-14 07:28:56,217 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-06-14 07:28:56,221 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Desktop\Java Full Stack - 2024 - Jan Batch\course 3\spring framework workspace\SpringBootRestAPI\SpringBootRestAPI\src\test\resources
+2024-06-14 07:31:18,366 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-06-14 07:31:18,372 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-06-14 07:31:18,374 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Desktop\Java Full Stack - 2024 - Jan Batch\course 3\spring framework workspace\SpringBootRestAPI\SpringBootRestAPI\src\test\resources
+2024-06-14 07:33:26,398 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-06-14 07:33:26,402 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-06-14 07:33:26,406 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Desktop\Java Full Stack - 2024 - Jan Batch\course 3\spring framework workspace\SpringBootRestAPI\SpringBootRestAPI\src\test\resources
