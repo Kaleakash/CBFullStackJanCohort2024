@@ -32,5 +32,9 @@ public Product(int pid, String pname, float price) {
 	this.pname = pname;
 	this.price = price;
 }
+@Override
+public String toString() {
+	return "Product [pid=" + pid + ", pname=" + pname + ", price=" + price + "]";
+}
 
 }

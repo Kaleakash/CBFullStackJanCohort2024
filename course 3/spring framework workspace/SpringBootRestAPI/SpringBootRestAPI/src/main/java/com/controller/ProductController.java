@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -50,7 +51,14 @@ public class ProductController {
 		System.out.println("post method called");
 		return "post method test";
 	}
-	
+	// http://localhost:9191/storeProduct
+	// data : {"pid":100,"pname":"TV","price":56000}
+	@RequestMapping(value = "storeProduct",method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_VALUE)
+	public String storeProduct(@RequestBody Product product) {//@RequestBody annotation extract json data from body part with post method 
+		System.out.println(product);
+		System.out.println("product data post method");
+		return "Product data stored";
+	}
 	
 }
 
