@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -60,6 +61,23 @@ public class ProductController {
 		return "Product data stored";
 	}
 	
+		// http://localhost:9191/updateProduct
+		// data : {"pid":100,"price":56000}
+	
+		@RequestMapping(value = "updateProduct",method = RequestMethod.PUT,consumes = MediaType.APPLICATION_JSON_VALUE)
+		public String updateProduct(@RequestBody Product product) {//@RequestBody annotation extract json data from body part with post method 
+			System.out.println(product);
+			System.out.println("product data update method");
+			return "Product data updated";
+		}
+		
+		// http://localhost:9191/deleteProduct/100
+			
+		@RequestMapping(value = "deleteProduct/{pid}",method = RequestMethod.DELETE)
+		public String deleteProduct(@PathVariable("pid") int pid) { 
+			System.out.println("product data update method");
+			return "Product deleted using pid as "+pid;
+		}
 }
 
 
