@@ -42,4 +42,16 @@ public class ProductController {
 		listOfProduct.add(p3);
 		return listOfProduct;
 	}
+	
+	// http://localhost:9191/posttest
+	
+	@RequestMapping(value = "posttest",method = RequestMethod.POST)
+	public String postTest() {
+		System.out.println("post method called");
+		return "post method test";
+	}
+	
+	
 }
+
+
