@@ -33,6 +33,32 @@ public class ProductService {
 		return productDao.findAll();
 	}
 	
+	
+	public String deleteProduct(int pid) {
+				
+		Optional<Product>	result	= productDao.findById(pid);
+		if(result.isPresent()) {
+			//Product p = result.get();
+			productDao.deleteById(pid);	
+			return "Product deleted successfully";
+		}else {
+			
+			return "Product not present";
+		}
+	}
+	
+	public String updateProduct(Product product) {	// id and price (new price)
+				
+		Optional<Product>	result	= productDao.findById(product.getPid());
+		if(result.isPresent()) {
+			Product p = result.get();
+			p.setPrice(product.getPrice());
+			productDao.saveAndFlush(p);
+			return "Product updated successfully";
+		}else {
+			return "Product not present";
+		}
+	}
 }
 
 
