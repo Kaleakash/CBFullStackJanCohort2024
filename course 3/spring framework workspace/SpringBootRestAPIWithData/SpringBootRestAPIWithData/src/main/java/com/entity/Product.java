@@ -1,7 +1,11 @@
 package com.entity;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Product {
@@ -9,6 +13,11 @@ public class Product {
 private int pid;
 private String pname;
 private float price;
+
+@OneToMany
+@JoinColumn(name = "pid")		// refer to fk in orders table. 
+private List<Orders> orderinfo;		
+
 public int getPid() {
 	return pid;
 }
