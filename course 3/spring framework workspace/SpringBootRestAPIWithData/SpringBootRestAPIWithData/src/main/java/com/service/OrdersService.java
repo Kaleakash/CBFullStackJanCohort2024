@@ -1,6 +1,7 @@
 package com.service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +45,25 @@ public class OrdersService {
 			}
 		}else {
 			return "Product details not present";
+		}
+	}
+	
+	public List<Orders> viewAllOrders() {
+		return ordersDao.findAll();
+	}
+	
+	public List<Orders> viewOrderByProductId(int pid){
+		return ordersDao.findOrdersByProductId(pid);
+	}
+	
+	public Orders searchOrdersByOrderId(int oid) {
+		
+		Optional<Orders> result = ordersDao.findById(oid);		//oid is pk 
+		if(result.isPresent()) {
+			Orders oo = result.get();
+			return oo;
+		}else {
+			return null;
 		}
 	}
 }
