@@ -13,11 +13,28 @@ public class Product {
 private int pid;
 private String pname;
 private float price;
-
+private int qty;
 @OneToMany
 @JoinColumn(name = "pid")		// refer to fk in orders table. 
 private List<Orders> orderinfo;		
 
+@Override
+public String toString() {
+	return "Product [pid=" + pid + ", pname=" + pname + ", price=" + price + ", qty=" + qty + ", orderinfo=" + orderinfo
+			+ "]";
+}
+public int getQty() {
+	return qty;
+}
+public void setQty(int qty) {
+	this.qty = qty;
+}
+public List<Orders> getOrderinfo() {
+	return orderinfo;
+}
+public void setOrderinfo(List<Orders> orderinfo) {
+	this.orderinfo = orderinfo;
+}
 public int getPid() {
 	return pid;
 }

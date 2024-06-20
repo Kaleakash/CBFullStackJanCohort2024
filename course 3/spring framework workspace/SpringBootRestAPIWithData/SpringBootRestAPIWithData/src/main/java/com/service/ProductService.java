@@ -47,12 +47,25 @@ public class ProductService {
 		}
 	}
 	
-	public String updateProduct(Product product) {	// id and price (new price)
+	public String updateProductPrice(Product product) {	// id and price (new price)
 				
 		Optional<Product>	result	= productDao.findById(product.getPid());
 		if(result.isPresent()) {
 			Product p = result.get();
 			p.setPrice(product.getPrice());
+			productDao.saveAndFlush(p);
+			return "Product updated successfully";
+		}else {
+			return "Product not present";
+		}
+	}
+	
+	public String updateProductQty(Product product) {	// id and qty (new qty)
+		
+		Optional<Product>	result	= productDao.findById(product.getPid());
+		if(result.isPresent()) {
+			Product p = result.get();
+			p.setQty(product.getQty());
 			productDao.saveAndFlush(p);
 			return "Product updated successfully";
 		}else {

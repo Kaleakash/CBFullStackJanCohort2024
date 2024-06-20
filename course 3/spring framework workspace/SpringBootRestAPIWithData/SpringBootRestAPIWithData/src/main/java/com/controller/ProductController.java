@@ -34,11 +34,17 @@ public class ProductController {
 	}
 	
 	//@RequestMapping(value = "update",consumes = MediaType.APPLICATION_JSON_VALUE,method = RequestMethod.PUT)
-	@PutMapping(value = "update",consumes = MediaType.APPLICATION_JSON_VALUE)
-	public String updateProduct(@RequestBody Product product) {
-		return productService.updateProduct(product);
+	@PutMapping(value = "updateprice",consumes = MediaType.APPLICATION_JSON_VALUE)
+	public String updateProductPrice(@RequestBody Product product) {
+		return productService.updateProductPrice(product);
 	}
 	
+	//@RequestMapping(value = "update",consumes = MediaType.APPLICATION_JSON_VALUE,method = RequestMethod.PUT)
+		@PutMapping(value = "updateqty",consumes = MediaType.APPLICATION_JSON_VALUE)
+		public String updateProductQty(@RequestBody Product product) {
+			return productService.updateProductQty(product);
+	}
+		
 	//@RequestMapping(value = "delete/{pid}",method = RequestMethod.DELETE)
 	@DeleteMapping(value = "delete/{pid}")
 	public String deleteProduct(@PathVariable("pid") int pid) {

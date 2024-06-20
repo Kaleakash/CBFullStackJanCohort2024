@@ -11,7 +11,7 @@ import com.entity.Orders;
 import com.service.OrdersService;
 
 @RestController
-@RequestMapping("order")
+@RequestMapping("order")		// http://localhost:8080/order/*
 public class OrdersController {
 
 	@Autowired
