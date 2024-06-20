@@ -138,3 +138,16 @@
 2024-06-18 09:14:00,863 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2024-06-18 09:14:00,871 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2024-06-18 09:14:00,874 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Desktop\Java Full Stack - 2024 - Jan Batch\course 3\spring framework workspace\SpringBootRestAPIWithData\SpringBootRestAPIWithData\src\test\resources
+2024-06-20 06:33:45,983 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-06-20 06:38:24,320 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-06-20 06:38:24,367 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-06-20 06:38:24,380 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Desktop\Java Full Stack - 2024 - Jan Batch\course 3\spring framework workspace\SpringBootRestAPIWithData\SpringBootRestAPIWithData\src\test\resources
+2024-06-20 06:40:45,573 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-06-20 06:40:45,577 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-06-20 06:40:45,580 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Desktop\Java Full Stack - 2024 - Jan Batch\course 3\spring framework workspace\SpringBootRestAPIWithData\SpringBootRestAPIWithData\src\test\resources
+2024-06-20 06:41:04,268 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-06-20 06:41:04,274 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-06-20 06:41:04,277 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Desktop\Java Full Stack - 2024 - Jan Batch\course 3\spring framework workspace\SpringBootRestAPIWithData\SpringBootRestAPIWithData\src\test\resources
+2024-06-20 06:41:24,479 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-06-20 06:41:24,484 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-06-20 06:41:24,487 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Desktop\Java Full Stack - 2024 - Jan Batch\course 3\spring framework workspace\SpringBootRestAPIWithData\SpringBootRestAPIWithData\src\test\resources
