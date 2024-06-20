@@ -14,6 +14,18 @@ public class Orders {
 private int oid;
 private LocalDateTime orderdate;
 private Integer pid;		//FK it can hold null value.
+private int qty;
+
+@Override
+public String toString() {
+	return "Orders [oid=" + oid + ", orderdate=" + orderdate + ", pid=" + pid + ", qty=" + qty + "]";
+}
+public int getQty() {
+	return qty;
+}
+public void setQty(int qty) {
+	this.qty = qty;
+}
 public int getOid() {
 	return oid;
 }
