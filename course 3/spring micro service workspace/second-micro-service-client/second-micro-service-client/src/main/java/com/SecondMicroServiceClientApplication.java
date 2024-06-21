@@ -6,11 +6,11 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication(scanBasePackages = "com")
 @EnableDiscoveryClient
-public class FirstMicroServiceClientApplication {
+public class SecondMicroServiceClientApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FirstMicroServiceClientApplication.class, args);
-		System.err.println("First micro service app up!");
+		SpringApplication.run(SecondMicroServiceClientApplication.class, args);
+		System.err.println("Second micro service up!");
 	}
 
 }
