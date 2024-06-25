@@ -1,5 +1,7 @@
 package com.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -30,6 +32,19 @@ public class GpayService {
 			return "gpay account created with account details";
 		}
 	}
+	
+	public String findBalance(int gpayid) {
+		Optional<Gpay> result = gpayRepository.findById(gpayid);
+		if(result.isPresent()) {
+			Gpay obj = result.get();
+			int accno = obj.getAccno();
+			String output = restTemplate.getForObject("http://ACCOUNT-MICRO-SERVICE/account/find/"+accno, String.class);
+			return output;
+		}else {
+			return "Gpay acount not exists";
+		}
+	}
+	
 }
 
 
