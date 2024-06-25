@@ -19,8 +19,8 @@ public class GpayService {
 	public String createGpayAccount(Gpay gpay) {		// only emailid present
 		String emailid = gpay.getEmailid();
 		//restTemplate.postForEntity("", gpay, String.class);
-		int accno = restTemplate.getForObject("http://localhost:8383/account/findbyemailid/"+emailid, Integer.class);
-		
+		//int accno = restTemplate.getForObject("http://localhost:8383/account/findbyemailid/"+emailid, Integer.class);
+		int accno = restTemplate.getForObject("http://ACCOUNT-MICRO-SERVICE/account/findbyemailid/"+emailid, Integer.class);
 		if(accno==-1) {
 			gpayRepository.save(gpay);
 			return "gpay account created without account register";  // emailid, but accno=0
