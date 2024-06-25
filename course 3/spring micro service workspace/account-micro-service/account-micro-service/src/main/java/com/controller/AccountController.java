@@ -28,6 +28,11 @@ public class AccountController {
 	public Account findAccountDetails(@PathVariable("accno") int accno) {
 		return accountService.findAccount(accno);
 	}
+	
+	@GetMapping(value = "findbyemailid/{emailid}",produces = MediaType.APPLICATION_JSON_VALUE)
+	public int findAccountNumber(@PathVariable("emailid") String emailid) {
+		return accountService.findAccno(emailid);
+	}
 }
 
 
