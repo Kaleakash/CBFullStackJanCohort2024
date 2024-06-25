@@ -33,7 +33,18 @@ public class AccountService {
 			return null;
 		}
 	}
+	public int findAccno(String emailid) {
+		try {
+		return accountRepository.findAccnumberByEmailId(emailid);
+		}catch(Exception e) {
+			return -1;
+		}
+	}
 }
+
+
+
+
 
 
 
