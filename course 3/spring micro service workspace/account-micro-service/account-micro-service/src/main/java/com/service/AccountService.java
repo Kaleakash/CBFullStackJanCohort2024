@@ -24,13 +24,13 @@ public class AccountService {
 		}
 	}
 	
-	public Account findAccount(int accno) {
+	public String findAccount(int accno) {
 		Optional<Account> result = accountRepository.findById(accno);
 		if(result.isPresent()) {
 			Account acc = result.get();
-			return acc;
+			return "Your balance is "+acc.getAmount();
 		}else {
-			return null;
+			return "Account number not exists";
 		}
 	}
 	public int findAccno(String emailid) {

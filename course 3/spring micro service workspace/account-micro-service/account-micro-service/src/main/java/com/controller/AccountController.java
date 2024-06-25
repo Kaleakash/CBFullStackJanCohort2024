@@ -25,7 +25,7 @@ public class AccountController {
 	}
 	
 	@GetMapping(value = "find/{accno}",produces = MediaType.APPLICATION_JSON_VALUE)
-	public Account findAccountDetails(@PathVariable("accno") int accno) {
+	public String findAccountDetails(@PathVariable("accno") int accno) {
 		return accountService.findAccount(accno);
 	}
 	
