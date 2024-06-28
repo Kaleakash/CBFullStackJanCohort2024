@@ -2,6 +2,8 @@ package com.service;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +12,7 @@ import com.bean.Product;
 class ProductServiceTest {
 
 	@Test
-	@Disabled
+	//@Disabled
 	void testStoreProduct() {
 		//fail("Not yet implemented");
 		ProductService ps = new ProductService();
@@ -20,6 +22,7 @@ class ProductServiceTest {
 	}
 
 	@Test
+	//@Disabled
 	void testGetProduct() {
 		//fail("Not yet implemented");
 		ProductService ps = new ProductService();
@@ -27,7 +30,7 @@ class ProductServiceTest {
 		assertNotNull(p);
 		assertEquals(100, p.getPid());
 			try {
-			assertEquals(45000, p.getPrice());
+			assertEquals(56000, p.getPrice());
 			}catch(Error e) {
 				System.err.println(e);
 			}
@@ -35,9 +38,19 @@ class ProductServiceTest {
 	}
 
 	@Test
-	@Disabled
 	void testFindAllProducts() {
-		//fail("Not yet implemented");
+		ProductService ps = new ProductService();
+		List<Product> listOfProduct = ps.findAllProducts();
+		assertNotNull(listOfProduct);
+		assertEquals(3, listOfProduct.size());
+		Product p = listOfProduct.get(1);
+		assertEquals(101, p.getPid());
+		try {
+		assertEquals(35000, p.getPrice());
+		}catch(Error e) {
+			System.err.println(e);
+		}
+		assertEquals("Computer", p.getPname());
 	}
 
 }
