@@ -23,4 +23,15 @@ public class LoginService {
 			return "account created successfully";
 		}
 	}
+	
+	public String signIn(Login login) {
+		Login result = loginRepository.signIn(login.getEmailid(), login.getPassword());
+		if(result!=null) {
+				return "success";
+		}else {
+			return "failure";
+		}
+	}
 }
+
+
