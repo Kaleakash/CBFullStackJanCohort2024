@@ -12,6 +12,7 @@ public class LoginAppSpringBootTestingApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LoginAppSpringBootTestingApplication.class, args);
+		System.out.println("spring boot up");
 	}
 
 }

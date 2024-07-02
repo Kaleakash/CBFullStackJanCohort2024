@@ -24,21 +24,21 @@ public class LoginService {
 		}
 	}
 	
-//	public String signIn(Login login) {
-//		Login result = loginRepository.signIn(login.getEmailid(), login.getPassword());
-//		if(result!=null) {
-//			return "success";
-//		}else {
-//			return "failure";
-//		}
-//	}
-	
 	public String signIn(Login login) {
-		// coding 
-		
-		System.out.println("i came in service layer");
-		return null;
+		Login result = loginRepository.signIn(login.getEmailid(), login.getPassword());
+		if(result!=null) {
+			return "success";
+		}else {
+			return "failure";
+		}
 	}
+	
+//	public String signIn(Login login) {
+//		// coding 
+//		
+//		System.out.println("i came in service layer");
+//		return null;
+//	}
 }
 
 
