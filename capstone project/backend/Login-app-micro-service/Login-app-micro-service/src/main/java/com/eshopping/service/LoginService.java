@@ -33,8 +33,11 @@ public class LoginService {
 				
 				if(ll.getTypeofuser().equals(login.getTypeofuser()) && ll.getTypeofuser().equals("admin")) {
 					return "Admin login successfully";
-				}else {
+				}else if(ll.getTypeofuser().equals(login.getTypeofuser()) && ll.getTypeofuser().equals("customer")) {
 					return "Customer login successfully";
+				}
+				else {
+					return "Type of user is invalid";
 				}
 				
 			}else {
