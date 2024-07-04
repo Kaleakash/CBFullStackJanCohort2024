@@ -1,1 +1,16 @@
-<p>signup works!</p>
+<div>
+    <h2>Account Create</h2>
+    <form #loginRef="ngForm" (ngSubmit)="signup(loginRef)">
+        <label>EmailId</label>
+        <input type="email" name="emailid" ngModel/><br/>
+        <label>Password</label>
+        <input type="password" name="password" ngModel/><br/>
+        <label>TypeOfUser</label>
+        <input type="radio" name="typeofuser" value="admin" ngModel/>Admin
+        <input type="radio" name="typeofuser" value="customer" ngModel/>Customer<br/>
+        <input type="submit" value="SignUp!"/>
+        <input type="reset" value="reset"/>
+    </form>
+    <br/>
+    <a routerLink="/login">Login!</a>
+</div>
