@@ -1,5 +1,6 @@
 <div>
     <h2>Account Create</h2>
+    <span style="color:red">{{msg}}</span>
     <form #loginRef="ngForm" (ngSubmit)="signup(loginRef)">
         <label>EmailId</label>
         <input type="email" name="emailid" ngModel/><br/>
