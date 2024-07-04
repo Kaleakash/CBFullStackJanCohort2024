@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { LoginService } from '../login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,7 @@ typeofuser:new FormControl()
 });
 msg:string ="";
 
-constructor(public ls:LoginService){}  // DI for service layer. 
+constructor(public ls:LoginService,public router:Router){}  // DI for service layer. 
 signin(): void {
 
   let login = this.loginRef.value;
@@ -26,6 +27,14 @@ signin(): void {
   this.ls.signIn(login).subscribe({
     next:(result:any)=> {
           this.msg=result;
+          if(this.msg=="Admin login successfully"){
+              this.router.navigate(["admin"],{skipLocationChange:true});
+          }else if(this.msg=="Customer login successfully"){
+            sessionStorage.setItem("user",login.emailid);  
+            this.router.navigate(["customer"],{skipLocationChange:true});
+          }else {
+
+          }
     },
     error:(error:any)=> {
         console.log(error);
