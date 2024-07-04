@@ -2,6 +2,7 @@ package com.eshopping.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +13,7 @@ import com.eshopping.service.LoginService;
 
 @RestController
 @RequestMapping("login")
+@CrossOrigin			// allow to access my rest api for all url for all methods. 
 public class LoginController {
 
 	@Autowired
