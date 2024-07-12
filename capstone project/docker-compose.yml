@@ -8,3 +8,6 @@ services:
       - MYSQL_DATABASE=capstonedb
     ports:
       - 3307:3306
+  spring-boot-service:
+    #image: imageName
+    build: ./backend/
