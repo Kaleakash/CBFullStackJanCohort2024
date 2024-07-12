@@ -8,6 +8,13 @@ services:
       - MYSQL_DATABASE=capstonedb
     ports:
       - 3307:3306
+    restart: always
   spring-boot-service:
     #image: imageName
-    build: ./backend/
+    build: ./backend/Login-app-micro-service/Login-app-micro-service/
+    container_name: spring_boot_container
+    ports:
+      - 8181:8181
+    depends_on:
+      - mysql-service
+    restart: always
