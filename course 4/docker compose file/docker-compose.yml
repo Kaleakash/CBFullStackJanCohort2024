@@ -1,0 +1,12 @@
+version: '3.6'
+services:
+  hello-service:
+    image: hello-world
+  ng-service:
+    image: nginx:latest
+    ports:
+      - 80:80
+  akash-service:
+    image: akashkale/my-angular-test:a2
+    ports:
+      - 81:80
