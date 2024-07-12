@@ -18,3 +18,8 @@ services:
     depends_on:
       - mysql-service
     restart: always
+  angular-service:
+    build: ./frontend/shopping-frontend-app/
+    container_name: angular_container
+    ports:
+      - 8282:80 
