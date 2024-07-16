@@ -10,7 +10,7 @@ services:
       - 3307:3306
     restart: always
   spring-boot-service:
-    #image: imageName
+    image: spring-boot-app
     build: ./backend/Login-app-micro-service/Login-app-micro-service/
     container_name: spring_boot_container
     ports:
@@ -19,6 +19,7 @@ services:
       - mysql-service
     restart: always
   angular-service:
+    image: angular-framework-app
     build: ./frontend/shopping-frontend-app/
     container_name: angular_container
     ports:
