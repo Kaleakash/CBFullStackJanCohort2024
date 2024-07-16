@@ -10,6 +10,8 @@ services:
       - 3307:3306
     networks:
       - private
+    volumes:
+      - db:/var/lib/mysql
     restart: always
   spring-boot-service:
     image: akashkale/spring-boot-app:c1
@@ -36,3 +38,6 @@ networks:
     name : spring-boot-mysql-network 
   public:
     name : angular-and-spring-boot-network
+volumes:
+  db:
+   driver: local
