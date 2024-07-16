@@ -8,6 +8,8 @@ services:
       - MYSQL_DATABASE=capstonedb
     ports:
       - 3307:3306
+    networks:
+      - private
     restart: always
   spring-boot-service:
     image: spring-boot-app
@@ -17,6 +19,8 @@ services:
       - 8181:8181
     depends_on:
       - mysql-service
+    networks:
+      - private
     restart: always
   angular-service:
     image: angular-framework-app
@@ -24,3 +28,6 @@ services:
     container_name: angular_container
     ports:
       - 8282:80 
+networks:
+  private :
+    name : spring-boot-mysql-network 
