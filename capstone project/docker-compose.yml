@@ -1,4 +1,4 @@
-version: '3.6'
+version: '3.8'
 services:
   mysql-service:
     image: mysql:8.0
@@ -13,24 +13,36 @@ services:
     volumes:
       - db:/var/lib/mysql
     restart: always
-  spring-boot-service:
-    image: akashkale/spring-boot-app:c1
-    #build: ./backend/Login-app-micro-service/Login-app-micro-service/
-    container_name: spring_boot_container
+  eureka-server:
+    image: akashkale/eureka-server:c2
+    build: ./backend/Eureka-Server/Eureka-Server/
+    container_name: eureka_container
+    ports:
+      - 8761:8761
+    networks:
+      - public 
+    restart: always
+  login-micro-service:
+    image: akashkale/login-micro-service-app:c2
+    build: ./backend/Login-app-micro-service/Login-app-micro-service/
+    container_name: login_micro_service_container
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
     ports:
       - 8181:8181
     depends_on:
       - mysql-service
+      - eureka-server
     networks:
       - private
-      - public 
+      - public
     restart: always
   angular-service:
-    image: akashkale/angular-framework-app:c1
-    #build: ./frontend/shopping-frontend-app/
+    image: akashkale/angular-framework-app:c2
+    build: ./frontend/shopping-frontend-app/
     container_name: angular_container
     ports:
-      - 8282:80
+      - 80:80
     networks:
       - public  
 networks:
@@ -41,3 +53,5 @@ networks:
 volumes:
   db:
    driver: local
+   
+  
