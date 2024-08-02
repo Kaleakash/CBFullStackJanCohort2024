@@ -30,6 +30,11 @@ public class ProductController {
 		return productService.retrieveAllProduct();
 	}
 	
+	@GetMapping(value = "findbyprice/{price}",produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Product> findByPrice(@PathVariable("price") float price){
+		return productService.findProductByPrice(price);
+	}
+	
 	@PostMapping(value = "store",consumes = MediaType.APPLICATION_JSON_VALUE)
 	public String storeProduct(@RequestBody Product product) {
 		return productService.addProduct(product);

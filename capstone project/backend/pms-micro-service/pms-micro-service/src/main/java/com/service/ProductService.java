@@ -39,7 +39,7 @@ public class ProductService {
 		if(result.isPresent()) {
 			Product p = result.get();
 			p.setImageurl(product.getImageurl());
-			p.setPrice(p.getPrice());
+				p.setPrice(product.getPrice());
 			p.setQty(product.getQty());
 			productRepository.saveAndFlush(p);
 			return "product details updated successfully";
@@ -48,4 +48,7 @@ public class ProductService {
 		}
 	}
 	
+	public List<Product> findProductByPrice(float price){
+		return productRepository.findProductByPrice(price);
+	}
 }

@@ -9,13 +9,15 @@ import { AdmindashboardComponent } from './admindashboard/admindashboard.compone
 import { CustomerdashboardComponent } from './customerdashboard/customerdashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { ProductviewComponent } from './productview/productview.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
     AdmindashboardComponent,
-    CustomerdashboardComponent
+    CustomerdashboardComponent,
+    ProductviewComponent,
   ],
   imports: [
     BrowserModule,
