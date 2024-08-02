@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 export class LoginService {
 
   baseUrl:string ="http://localhost:8181/login";
+  //baseUrl:string ="http://100.26.59.240:8181/login";
 
   constructor(public http:HttpClient) { } // DI for HttpClient reference. 
 

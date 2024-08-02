@@ -175,6 +175,9 @@ sudo yum install docker
 
 sudo service docker start
 
+sudo service docker status
+sudo service docker stop
+
 sudo docker info
 
 sudo docker images 

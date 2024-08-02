@@ -14,8 +14,8 @@ services:
       - db:/var/lib/mysql
     restart: always
   eureka-server:
-    image: akashkale/eureka-server:c2
-    build: ./backend/Eureka-Server/Eureka-Server/
+    image: akashkale/eureka-server:c4
+    #build: ./backend/Eureka-Server/Eureka-Server/
     container_name: eureka_container
     ports:
       - 8761:8761
@@ -23,8 +23,8 @@ services:
       - public 
     restart: always
   login-micro-service:
-    image: akashkale/login-micro-service-app:c2
-    build: ./backend/Login-app-micro-service/Login-app-micro-service/
+    image: akashkale/login-micro-service-app:c4
+    #build: ./backend/Login-app-micro-service/Login-app-micro-service/
     container_name: login_micro_service_container
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
@@ -38,11 +38,11 @@ services:
       - public
     restart: always
   angular-service:
-    image: akashkale/angular-framework-app:c2
-    build: ./frontend/shopping-frontend-app/
+    image: akashkale/angular-framework-app:c4
+    #build: ./frontend/shopping-frontend-app/
     container_name: angular_container
     ports:
-      - 80:80
+      - 81:80
     networks:
       - public  
 networks:

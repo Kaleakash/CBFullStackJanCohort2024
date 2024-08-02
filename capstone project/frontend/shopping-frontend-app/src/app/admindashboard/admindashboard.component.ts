@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admindashboard',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AdmindashboardComponent {
 
+  constructor(public router:Router){ //DI for Router 
+
+  }
+
+  logout(): void {
+    this.router.navigate(["login"]);
+  }
 }

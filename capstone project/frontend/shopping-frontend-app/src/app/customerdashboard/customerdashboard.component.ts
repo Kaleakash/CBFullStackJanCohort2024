@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-customerdashboard',
@@ -13,5 +14,13 @@ export class CustomerdashboardComponent implements OnInit{
     if(obj!=null){
         this.emailid=obj;
     }
+  }
+
+  constructor(public router:Router){ //DI for Router 
+
+  }
+
+  logout(): void {
+    this.router.navigate(["login"]);
   }
 }
