@@ -14,4 +14,21 @@ export class ProductService {
   viewAllProducts():Observable<Product[]>{
     return this.http.get<Product[]>(this.baseUrl+"/find");
   }
+
+  storeProduct(product:any):Observable<string>{
+    return this.http.post(`${this.baseUrl}/store`,product,{responseType:'text'});
+  }
+
+  deleteProduct(pid:number):Observable<string> {
+    return this.http.delete(`${this.baseUrl}/delete/${pid}`,{responseType:'text'});
+  }
+
+  updateProduct(product:any):Observable<string>{
+    return this.http.put(`${this.baseUrl}/update`,product,{responseType:'text'});
+  }
 }
+
+
+
+
+
