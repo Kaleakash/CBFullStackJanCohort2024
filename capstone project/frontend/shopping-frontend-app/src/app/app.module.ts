@@ -10,6 +10,7 @@ import { CustomerdashboardComponent } from './customerdashboard/customerdashboar
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { ProductviewComponent } from './productview/productview.component';
+import { CustomerproductviewComponent } from './customerproductview/customerproductview.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +19,7 @@ import { ProductviewComponent } from './productview/productview.component';
     AdmindashboardComponent,
     CustomerdashboardComponent,
     ProductviewComponent,
+    CustomerproductviewComponent,
   ],
   imports: [
     BrowserModule,
