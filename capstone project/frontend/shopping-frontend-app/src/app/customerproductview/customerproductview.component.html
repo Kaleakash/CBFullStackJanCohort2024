@@ -1,13 +1,13 @@
 <div>
     <div>Cart Info : {{carts.length}}<a (click)="viewCart()">View Cart</a></div>
     
-    
+    <div *ngIf="!payment_flag">    
     <div *ngIf="flag">
         <h3>Product Details</h3>
-        <div *ngFor="let product of products" class="imageClass">
+        <div *ngFor="let product of products;let i=index;" class="imageClass">
             <img src={{product.imageurl}} width="100px" height="100px"/>
             <span>Name : {{product.pname}} Price : {{product.price}}</span>
-            <input type="button" value="Add to Cart" (click)="addToCart(product)"/>
+            <input type="button" value="Add to Cart" (click)="addToCart(product,i)"/>
         </div>
     </div>
 
@@ -45,6 +45,19 @@
        </table>
        <span>Total : {{total}}</span>
        <input type="button" value="Continue Shopping" (click)="continueShopping()"/>
+       <input type="button" value="Payment" (click)="processedForPayment()"/>
+    </div>
+
+    </div>
+
+    <div *ngIf="payment_flag">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAY1BMVEX///8AAAAqKir5+fnd3d2pqalSUlKurq6SkpLy8vI7OztjY2Nra2vR0dEhISGHh4cMDAzDw8Pp6emjo6NBQUG6urovLy9MTExxcXGAgIB3d3dZWVk0NDTj4+MXFxe0tLSamppaiTj+AAAELElEQVR4nO2a2ZKqMBBAQWAIIvsiiyj//5XXbIAQUKDFqlt9nqYYDIek09nQNARBEARBEARBEARBEARBEIRhOHswvqEUkfp22s750nrQSlmq7yZ0TUglI9ivxHgAOv0BOel6CyZV8gLzimzHFVYZkNODlXbdG6fJiRbjNyBOWkgLK/Z36eZOCyoBjERF1RBpxvSfJYUOQElaQaVgcgyhRdkABTnXZ0EpQEG0LCoVABRk5mCBoGl3mOjUTNpprP3lMGjCu/x3UkZsUiIqRRoTgua6Syp+VG6as/Gdpbx8xwShJw+3SxkZ3GA3ZZtU9E2lbVLN5atKm6Sis/htmLsksSyL0LGhsC0QblukDCKUXCuWNUcjHWJooNQbpBox6U2j/oe/zlOJqKZ2ePG3UnHBlW6vMwImlWgGBKulPJ87VaP5DpO6/YFQ39dJifWKP5lDM6mfpASz5j+opyuzn0llIb+fqHx/I+VU/O6Tcs7LpKqHDcHj/KmUJ3J4FSv/bUImz097n0xOc6noB3mKLQueXNXV9BspkQna+RuPlzLYPCVdWtUppbbOaD+rKRpR7mzTqaWioCoqsml5+mGgZ0W0fMNIKrZkvlmoX8MbsVLqLS9SRnsbpMHZbZ1ynDBlVv6ClDne0JvZmGumadz7klRc+t0zxNATqqPxIClb89zuAQV9Qsa8ZjYrjmm+6hLK8i9iImGyYFdX1TGB3jVb0FuQQbN8CphU3imFZLhhGS1IedELwDUVPzqnc/I6UfbmpVx9hNyTgpByLLk01X17HD7JrNS094Vgva9JukL/phnJoNdzZaDHX5OKg67hrtF0R9dhQ3ml/m2phy90qWOf1OA0Rjk4mnweNncCZL5mhO62fZtmck/hrjx5ckq2T79+o3ehdj9ABHipUmpkLVZr35kFm2rJ9Bk0xk+lKoz7IXD9K7Nl044jI6tolUqBHG/C9YWz5WUIfW4bB3eZtsjidFUJGwJ2tJ4Sh8haOlmrlQyPL3nPIOdFHV4/nfKv6Xklvngh2NNtokMAeIj8TAM1hNIZtJ6i/P0T36Psz1uRY07K9mldDu2Htwv7c3h5liACzQWO2O53HbbmExfpMCaGGZtehu1V7/C4UpiIKRR/4ZhWj8vvSA6XEr3OpzFqDaRoTYX8lvpgqUYeHtHvCeJ6IMWGbLoN4bCIuxzn5PVLmVsZcEHerUWjpmXAZ1agCWgJeVKT9rlcF2s9Y/SV0GEVJQ/Z6jh5EUht0x4dCZ4hM9ACnpzK0WHdDnUFhbw6PqX4Co7ZunKSwkPIDJ5NeL94w32XSjMrdvXNDtf6xxf+lGFl9O1isG7XWxGjvwrL8idkfjJ9pHdljXaFrp4eY7LAHnAi6lCJsywD+gpKTTtbSX+Pg3qUAitQQCzFmhhBEARBEARBEARBEARBEARB/nf+AQiOQUp7zq0tAAAAAElFTkSuQmCC"
+        width="200px" height="200px"
+        />
+        <br/>
+        Card Number <input type="number" placeholder="XXXX-XXXX-XXXX"/>
+        Pin <input type="number" placeholder="XXX"/>
+        <input type="button" value="Do Payment" (click)="payment()"/>
     </div>
 </div>
 
