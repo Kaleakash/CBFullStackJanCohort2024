@@ -19,4 +19,13 @@ public class OrdersInfoService {
 		ordersInfoRepository.save(order);
 		return "Order Placed successfully";
 	}
+	
+	
+	public Object[] viewAllOrderInfo() {
+		return ordersInfoRepository.viewAllOrdersInfo();
+	}
+	
+	public Object[] viewOrdersInfoByCustomer(String emailid) {
+		return ordersInfoRepository.viewOrdersInfoByCustomer(emailid);
+	}
 }

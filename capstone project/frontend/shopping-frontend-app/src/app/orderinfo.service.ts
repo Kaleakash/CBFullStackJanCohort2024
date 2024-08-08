@@ -13,4 +13,8 @@ export class OrderinfoService {
   placeOrder(orders:any):Observable<string> {
     return this.http.post(`${this.baseUrl}/placeorder`,orders,{responseType:'text'});
   }
+
+  viewAllOrders():Observable<Object[]> {
+    return this.http.get<Object[]>(`${this.baseUrl}/viewallorders`);
+  }
 }
