@@ -28,7 +28,7 @@ public class LoginAppMicroServiceApplication {
 		//System.out.println("method called..");
 		Optional<Login> result = loginRepository.findById("admin@gmail.com");
 		if(result.isPresent()) {
-			System.err.println("Admin account aready present");
+			System.err.println("Admin account already present");
 		}else {
 			Login ll = new Login();
 			ll.setEmailid("admin@gmail.com");
